@@ -12,18 +12,13 @@ const SinglePage = ({Component, dataType}) => {
 
         useEffect(() => {
             updateData()
+            // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [id])
 
         const updateData = () => {
             clearError();
 
-            switch (dataType) {
-                case 'comic':
-                    getComic(id).then(onDataLoaded).then(() => setProcess('confirmed'));
-                    break;
-                case 'character':
-                    getCharacter(id).then(onDataLoaded).then(() => setProcess('confirmed'));
-            }
+            dataType === 'comic' ? getComic(id).then(onDataLoaded).then(() => setProcess('confirmed')) : getCharacter(id).then(onDataLoaded).then(() => setProcess('confirmed'));
         }
 
         const onDataLoaded = (data) => {

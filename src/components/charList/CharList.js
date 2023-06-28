@@ -33,6 +33,7 @@ const CharList = (props) => {
 
     useEffect(() => {
         onRequest(offset, true);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const onRequest = (offset, initial) => {
@@ -103,6 +104,7 @@ const CharList = (props) => {
 
     const elements = useMemo(() => {
         return setContent(process, () => renderItems(charList), newItemLoading);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [process]);
     
     return (
