@@ -36,6 +36,8 @@ const CharList = (props) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    //test
+
     const onRequest = (offset, initial) => {
         initial ? setNewItemLoading(false) : setNewItemLoading(true);
         getAllCharacters(offset).then(onCharListLoaded).then(() => setProcess('confirmed'));
