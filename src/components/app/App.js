@@ -1,5 +1,5 @@
 import {lazy, Suspense} from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {HashRouter as Router, Route, Routes} from 'react-router-dom';
 
 import AppHeader from "../appHeader/AppHeader";
 import Spinner from '../spinner/Spinner';
@@ -12,7 +12,6 @@ const SingleCharacterLayout = lazy(() => import('../pages/singleCharacterLayout/
 const SinglePage = lazy(() => import('../pages/SinglePage'));
 
 const App = () => {
-
     return (
         <Router>
             <div className="app">
