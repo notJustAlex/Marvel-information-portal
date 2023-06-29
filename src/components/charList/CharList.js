@@ -34,13 +34,7 @@ const CharList = (props) => {
     useEffect(() => {
         onRequest(offset, true);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-    const someFun = () => {
-        console.log('test')
-    }
-
-    someFun()
+    }, []);
 
     const onRequest = (offset, initial) => {
         initial ? setNewItemLoading(false) : setNewItemLoading(true);
